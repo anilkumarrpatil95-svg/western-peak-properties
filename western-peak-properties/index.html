@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Western Peak Properties | Chikmagalur Real Estate</title>
+  <meta name="description" content="Premium coffee estates, land and properties in Chikmagalur">
+  <meta name="google-site-verification" content="NH1RLJThvc_InO2jV5OdmqiiAqzO7RSKlkSaFuaK7QE" />
+  
+  <style>
+
+    :root{
+
+      --primary:#0707fc;
+
+      --secondary:#b6462f;
+
+      --accent:#c9a24d;
+
+      --light:#dfd9dc;
+  
+    }
+
+
+    body{
+
+      margin:0;
+
+      font-family:'Segoe UI', Arial, sans-serif;
+
+      background:linear-gradient(135deg,#eef3f1,#e3ebe8);
+    
+    }
+
+
+.page-wrapper{
+
+  max-width:1100px;
+
+  margin:25px auto;
+
+  background:#f0ecec;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+
+}
+
+.phone-icon{
+
+  display:inline-block;
+
+  margin-right:8px;
+
+  animation:ring 1.5s infinite;
+
+  transform-origin:center;
+
+}
+
+ 
+
+@keyframes ring{
+
+  0%{transform:rotate(0deg);}
+
+  10%{transform:rotate(15deg);}
+
+  20%{transform:rotate(-15deg);}
+
+  30%{transform:rotate(12deg);}
+
+  40%{transform:rotate(-12deg);}
+
+  50%{transform:rotate(0deg);}
+
+  100%{transform:rotate(0deg);}
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+  position:relative;
+
+  height:85vh;
+
+  background:
+
+    linear-gradient(rgba(41, 41, 41, 0.6), rgba(0,0,0,0.65)),
+
+    url('https://images.unsplash.com/photo-1501183638710-841dd1904471');
+
+  background-size:cover;
+
+  background-position:center;
+
+}
+
+.logo-box{
+
+  position:absolute;
+
+  top:22px;
+
+  left:30px;
+
+}
+
+ 
+
+.logo-box img{
+
+  height:120px;
+
+  width:120px;
+
+  border-radius:50%;
+
+  background:#dbd9d9;
+
+  padding:6px;
+
+  animation:floatLogo 4s ease-in-out infinite;
+
+}
+
+ 
+
+@keyframes floatLogo{
+
+  50%{transform:translateY(-6px);}
+
+}
+
+ 
+
+.hero-content h1{
+
+  color:#F5F5F2; /* Soft white */
+
+}
+
+ 
+
+.hero-content h2{
+
+  color:#C9A24D; /* Luxury gold */
+
+  font-weight:800;
+
+  margin-top:10px;
+
+}
+
+ 
+
+.hero-content p{
+
+  color:#DADADA;
+
+  letter-spacing:1px;
+
+}
+
+ 
+
+.animated-header{
+
+  font-size:34px;
+
+  font-weight:600;
+
+  color:#F5F5F2;
+
+  animation:fadeMove 4s ease-in-out infinite;
+
+}
+
+ 
+
+@keyframes fadeMove{
+
+  0%{opacity:0;transform:translateY(-20px);}
+
+  50%{opacity:1;}
+
+  100%{opacity:0;transform:translateY(20px);}
+
+}
+
+ 
+
+.hero-btn{
+
+  margin-top:22px;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:14px 36px;
+
+  background:linear-gradient(135deg,#C9A24D,#E0B95B);
+
+  color:#111111;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+  transition:all 0.3s ease;
+
+}
+
+ 
+
+.hero-btn:hover{
+
+  transform:translateY(-2px);
+
+  background:linear-gradient(135deg,#B8923D,#C9A24D);
+
+}
+
+ 
+
+section{padding:30px 38px;}
+
+h2{color:var(--primary);}
+
+ 
+
+/* EXPERIENCE / ABOUT / WHY US */
+
+.card-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+  gap:18px;
+
+}
+
+ 
+
+.info-card{
+
+  background:var(--light);
+
+  padding:22px;
+
+  border-radius:14px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+
+  border-left:5px solid var(--secondary);
+
+}
+
+ 
+
+/* PROPERTY */
+
+.property-card{
+
+  background:#f9fbfa;
+
+  padding:20px;
+
+  border-radius:14px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+
+  border-left:6px solid var(--accent);
+
+  margin-bottom:20px;
+
+}
+
+ 
+
+.property-images{
+
+  display:flex;
+
+  gap:10px;
+
+  margin-bottom:12px;
+
+}
+
+ 
+
+.property-images img{
+
+  width:140px;
+
+  height:90px;
+
+  object-fit:cover;
+
+  border-radius:10px;
+
+}
+
+ 
+
+/* REVIEWS */
+
+.review-box{
+
+  background:#eef6f2;
+
+  padding:26px;
+
+  border-radius:16px;
+
+}
+
+ 
+
+.stars{
+
+  display:flex;
+
+  flex-direction:row-reverse;
+
+  justify-content:flex-end;
+
+}
+
+ 
+
+.stars input{display:none;}
+
+.stars label{font-size:30px;color:#ccc;cursor:pointer;}
+
+.stars input:checked ~ label,
+
+.stars label:hover,
+
+.stars label:hover ~ label{color:var(--accent);}
+
+ 
+
+.review-box textarea{
+
+  width:80%;
+
+  margin-top:12px;
+
+  padding:12px;
+
+  border-radius:10px;
+
+}
+
+ 
+
+.review-box button{
+
+  margin-top:12px;
+
+  padding:10px 22px;
+
+  border:none;
+
+  border-radius:30px;
+
+  background:var(--secondary);
+
+  color:#fff;
+
+}
+
+ 
+
+/* ================= CONTACT (ONLY UPDATED PART) ================= */
+
+.contact-cards{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+  gap:24px;
+
+  margin-top:20px;
+
+}
+
+ 
+
+.contact-card{
+
+  background:#fff;
+
+  border-radius:18px;
+
+  padding:28px 20px;
+
+  text-decoration:none;
+
+  color:#000;
+
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  transition:0.3s ease;
+
+}
+
+ 
+
+.contact-card:hover{
+
+  transform:translateY(-6px);
+
+}
+
+ 
+
+.contact-card span.icon{
+
+  font-size:34px;
+
+  margin-bottom:10px;
+
+  color:var(--secondary);
+
+}
+
+ 
+
+.contact-card span.label{
+
+  font-weight:700;
+
+  margin-bottom:6px;
+
+}
+
+ 
+
+.contact-card span.value{
+
+  font-size:15px;
+
+  color:#333;
+
+  word-break:break-word;
+
+}
+ 
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+
+  position:fixed;
+
+  bottom:22px;
+
+  right:22px;
+
+  width:48px;
+
+  height:48px;
+
+  background:#25d366;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  z-index:999;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+  transition:transform 0.3s ease;
+
+}
+
+ 
+
+.whatsapp-float img{
+
+  width:26px;
+
+  height:26px;
+
+}
+
+ 
+
+.whatsapp-float:hover{
+
+  transform:scale(1.1);
+
+}
+
+@keyframes pulse{
+
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,0.6);}
+
+  70%{box-shadow:0 0 0 15px rgba(37,211,102,0);}
+
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+
+}
+
+ 
+
+.whatsapp-float{
+
+  animation:pulse 2.2s infinite;
+
+}
+
+ 
+
+footer{
+
+  background:#e57017;
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:14px;
+
+}
+
+.hero-content{
+
+  text-align:center !important;
+
+}
+
+.hero-content{
+
+  position:absolute;
+
+  top:50%;
+
+  left:50%;
+
+  transform:translate(-50%, -50%);
+
+  text-align:center;
+
+  width:100%;
+
+  max-width:900px;
+
+}
+
+/* ===== PREMIUM PROPERTY TYPE CARDS ===== */
+
+.property-types {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 24px;
+
+  margin-top: 30px;
+
+}
+
+ 
+
+.property-type-card {
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+}
+
+ 
+
+.property-type-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+
+}
+
+ 
+
+/* Image */
+
+.property-card img {
+
+  width: 60%;
+
+  height: 160px;
+
+  object-fit: cover;
+
+}
+
+ 
+
+/* Content */
+
+.property-card-content {
+
+  padding: 18px 20px 22px;
+
+}
+
+ 
+
+.property-card-content h3 {
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+
+  color: #1f2937;
+
+}
+
+ 
+
+.property-card-content p {
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #555;
+
+  margin-bottom: 16px;
+
+}
+
+ 
+
+/* Button */
+
+.property-card-content a {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 18px;
+
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+
+  color: #fff;
+
+  text-decoration: none;
+
+  border-radius: 25px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: background 0.3s ease, transform 0.3s ease;
+
+}
+
+ 
+
+.property-card-content a:hover {
+
+  background: linear-gradient(135deg, #0d9488, #2dd4bf);
+
+  transform: scale(1.05);
+
+}
+
+ 
+</style>
+
+<script>
+
+function submitReview() {
+  var comment = document.getElementById("comment").value;
+  alert("Your review has been submitted Successfully");
+  document.getElementById("comment").value = '';
+}
+
+</script>
+
+</head>
+ 
+<body>
+
+ 
+
+<a href="https://wa.me/918762431194"
+
+   class="whatsapp-float"
+
+   target="_blank"
+
+   aria-label="WhatsApp Chat">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="">
+
+</a>
+
+<div class="page-wrapper">
+
+ 
+
+<header class="hero">
+
+  <div class="logo-box">
+
+    <img src="logo.png" alt="Western Peak Properties">
+
+  </div>
+
+ 
+
+  <div class="hero-content">
+
+    <h1 class="animated-header">Exclusive Private Properties in<br>
+
+      Chikmagalur, Mudigere & Sakleshpur</h1>
+
+    <h2>Hailed From the Region of Malnad</h2>
+
+    <p>Private   Premium   Verified Properties</p>
+
+    <p> SALE | RENT | LEASE</p>
+
+    <a href="#contact" class="hero-btn">
+
+  <span class="phone-icon">📞</span> Enquire Now.
+
+</a>
+
+ 
+
+  </div>
+
+</header>
+
+ 
+
+<!-- EXPERIENCE / ABOUT / WHY US -->
+
+<section>
+
+<div class="card-grid">
+
+ 
+
+<div class="info-card">
+
+<h2>Experience</h2>
+
+<p>
+
+With years of on-ground experience in the Malnad region, Western Peak Properties has built
+
+strong local connections with landowners, estate managers, and investors. Our deep regional
+
+knowledge ensures transparent dealings, verified documentation, and genuine opportunities.
+
+</p>
+
+</div>
+
+ 
+
+<div class="info-card">
+
+<h2>About Us</h2>
+
+<p>
+
+Western Peak Properties specializes in premium private listings across Chikmagalur,
+
+Mudigere, Sakleshpur, and surrounding Malnad areas. We focus on coffee estates, agricultural
+
+land, luxury homes, homestays, and commercial properties, ensuring privacy, authenticity,
+
+and value for every client.
+
+</p>
+
+</div>
+
+ 
+
+<div class="info-card">
+
+<h2>Why Us</h2>
+
+<p>
+
+✔ Verified properties only<br>
+
+✔ Complete legal guidance<br>
+
+✔ End-to-end support from site visit to registration<br>
+
+✔ Trusted by buyers, sellers, and investors across Karnataka
+
+</p>
+
+</div>
+
+ 
+
+</div>
+
+</section>
+
+ 
+
+<!-- PROPERTY TYPES -->
+
+<section>
+
+<h2>Property Types</h2>
+
+ 
+
+<div class="property-card">
+
+<div class="property-images">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqwz02s0mHajzgiycBI3WF2CZW5rBHsynnTPI7YqHdKA&s=10">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyURyRTeXKiFObrp3ywDLgXxU0emLqxvpm0Lbw4oO1NA&s=10">
+
+</div>
+
+<strong>Coffee Estates (Sale / Rent / Lease)</strong>
+
+<p>
+
+Select coffee estates ranging from 5 100 acres, available for sale, rent, or long-term lease. Curated and shared privately with qualified buyers.
+
+</p>
+
+</div>
+
+ 
+
+<div class="property-card">
+
+<div class="property-images">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR35Qc9c1PhtrhXmPtIF8IsoAmlq4UsOmpJtqGn3oYqww&s=10">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXqp40iVxEf1ptSI-1LOvwjavwW8E6xTIYbYy3gGPbmw&s=10">
+
+</div>
+
+<strong>Land/paddy field/site</strong>
+
+<p>
+
+Select land parcels available for sale or lease, offered through a private and verified listing process.
+
+Fertile paddy fields available for sale or lease, upto 5 to 100acres managed with discretion and proper verification.
+
+Approved sites and plots available in select locations, shared privately upon inquiry.
+
+Limited sites offered with clear.
+
+</p>
+
+</div>
+
+ 
+
+<div class="property-card">
+
+<div class="property-images">
+
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+
+</div>
+
+<strong>Luxury Residential & Commercial</strong>
+
+<p>
+
+Residential:  Curated luxury residences and villas, shared privately with qualified clients.
+
+Commercial:  Premium commercial properties offered confidentially to discerning investors and businesses.
+
+</p>
+
+</div>
+
+ 
+
+<div class="property-card">
+
+<div class="property-images">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+
+</div>
+
+<strong>Homestays & Holiday Homes</strong>
+
+<p>
+
+Exclusive homestays and resorts in prime locations, offering elegance, privacy, and exceptional investment value.
+
+</p>
+
+</div>
+
+ 
+
+<div class="property-card">
+
+<div class="property-images">
+
+</div>
+
+<strong>Legal Assistance</strong>
+
+<p>
+
+We facilitate legal due diligence through experienced and independent legal professionals, including title verification, land records review, and agreement drafting. Every transaction is handled with transparency and compliance, while final legal decisions remain with the client's appointed advocate.
+
+</p>
+
+</div>
+
+ 
+
+</section>
+
+ 
+
+<!-- REVIEWS -->
+
+<section>
+
+<h2>Customer Reviews</h2>
+
+<div class="review-box">
+
+<div class="stars">
+
+<input type="radio" id="r5"><label for="r5">★</label>
+
+<input type="radio" id="r4"><label for="r4">★</label>
+
+<input type="radio" id="r3"><label for="r3">★</label>
+
+<input type="radio" id="r2"><label for="r2">★</label>
+
+<input type="radio" id="r1"><label for="r1">★</label>
+
+</div>
+
+<textarea rows="4" style="resize: none;" placeholder="Write your experience with us..." id="comment"></textarea>
+
+<button onclick="submitReview()">Submit Review</button>
+
+</div>
+
+</section>
+
+ 
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-cards">
+
+ 
+
+<a href="tel:+918762431194" class="contact-card">
+
+  <span class="icon">📞</span>
+
+  <span class="label">Call Us</span>
+
+  <span class="value">+91 87624 31194</span>
+
+</a>
+
+ 
+
+<a href="tel:+919353707326" class="contact-card">
+
+  <span class="icon">📱</span>
+
+  <span class="label">Alternate Number</span>
+
+  <span class="value">+91 93537 07326</span>
+
+</a>
+
+ 
+
+<a href="mailto:westernpeakproperties@gmail.com" class="contact-card">
+
+  <span class="icon">✉️</span>
+
+  <span class="label">Email</span>
+
+  <span class="value">westernpeakproperties@gmail.com</span>
+
+</a>
+
+ 
+
+</div>
+
+</section>
+
+ 
+
+<footer>  2026 Western Peak Properties. All Rights Reserved.</footer>
+
+ 
+
+</div>
+
+</body>
+
+</html>
+
+ 
+
+ 
