@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Western Peak Properties | Chikmagalur Real Estate</title>
   <meta name="description" content="Premium coffee estates, land and properties in Chikmagalur">
-  <meta name="google-site-verification" content="pVERcsaXRenMd7JehR3ZS_yVv46cjo53Z2eYoUP_q9U" />
-  <link rel="canonical" href="https://www.westernpeakproperties.com/" />
-
-
+  <meta name="google-site-verification" content="NH1RLJThvc_InO2jV5OdmqiiAqzO7RSKlkSaFuaK7QE" />
+  <link rel="canonical" href="https://www.westernpeakproperties.com/">
   
   <style>
 
@@ -1094,11 +1092,21 @@ We facilitate legal due diligence through experienced and independent legal prof
     <input type="radio" name="rating" value="1" id="r1"><label for="r1">★</label>
   </div>
 
-  <textarea id="comment" rows="4"
-    placeholder="Write your experience with us..."
-    style="resize:none;"></textarea>
+  <form id="reviewForm">
 
-  <button onclick="submitReview()">Submit Review</button>
+  <textarea id="comment" placeholder="Your Review" required></textarea>
+
+  <!-- rating stars here -->
+
+  <!-- ADD THIS TEXT HERE ⬇️ -->
+  <p style="font-size:13px;color:#666;margin-top:8px;">
+    Note: Reviews submitted here are stored only in your browser (local storage)
+    and are displayed on this device only. They are not published publicly
+    or stored on any server.
+  </p>
+
+  <button type="button" onclick="submitReview()">Preview Review</button>
+</form>
 </div>
 <div id="ratingSummary" style="
   font-size:18px;
@@ -1173,6 +1181,13 @@ We facilitate legal due diligence through experienced and independent legal prof
 </div>
 
 <script>
+/*
+  Review system note:
+  - Uses browser localStorage only
+  - No backend, no server submission
+  - Reviews are visible only on the user's device
+*/
+
 let showAll = false;
 
 function submitReview() {
@@ -1181,7 +1196,7 @@ function submitReview() {
   const rating = document.querySelector('input[name="rating"]:checked');
 
   if (!name || !rating || comment.trim() === "") {
-    alert("Please enter name, rating and review");
+    alert("Please enter your name, rating and review.");
     return;
   }
 
@@ -1253,7 +1268,7 @@ function showOverallRating(reviews) {
 
   document.getElementById("ratingSummary").innerHTML =
     `⭐ <strong>${avg}</strong> / 5 <span style="font-size:14px;color:#666;">
-    (${reviews.length} reviews)</span>`;
+    (${reviews.length} local reviews)</span>`;
 }
 
 window.onload = loadReviews;
@@ -1269,8 +1284,13 @@ window.onload = loadReviews;
 
  
 
+ 
 
  
+
+
+ 
+
 
 
 
