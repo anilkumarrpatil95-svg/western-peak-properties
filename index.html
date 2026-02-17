@@ -25,13 +25,18 @@
 
     body{
 
-      margin:0;
+  margin:0;
 
-      font-family:'Segoe UI', Arial, sans-serif;
+  font-family:'Segoe UI', Arial, sans-serif;
 
-      background:linear-gradient(135deg,#eef3f1,#e3ebe8);
-    
-    }
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('coffee-bg.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 
 .page-wrapper{
@@ -40,7 +45,7 @@
 
   margin:25px auto;
 
-  background:#f0ecec;
+  background: transparent;
 
   border-radius:18px;
 
@@ -90,17 +95,10 @@
 
   height:85vh;
 
-  background:
-
-    linear-gradient(rgba(84, 82, 82, 0.6), rgba(32, 31, 31, 0.65)),
-
-    url('https://images.unsplash.com/photo-1501183638710-841dd1904471');
-
-  background-size:cover;
-
-  background-position:center;
+  background: transparent;
 
 }
+
 
 .logo-box{
 
@@ -178,7 +176,7 @@
 
   color:#F5F5F2;
 
-  animation:fadeMove 4s ease-in-out infinite;
+  animation:fadeMove 2s ease-in-out infinite;
 
 }
 
@@ -274,13 +272,13 @@ h2{color:var(--primary);}
 
 /* PROPERTY */
 
-.property-card{
+.property-card {
 
-  background:#f9fbfa;
+  background: rgba(255,255,255,0.85); /* semi-transparent */
 
-  padding:20px;
+  padding: 20px;
 
-  border-radius:14px;
+  border-radius: 14px;
 
   box-shadow:0 8px 20px rgba(0,0,0,0.06);
 
@@ -289,6 +287,7 @@ h2{color:var(--primary);}
   margin-bottom:20px;
 
 }
+
 
  
 
@@ -402,19 +401,21 @@ h2{color:var(--primary);}
 
 /* ================= CONTACT (ONLY UPDATED PART) ================= */
 
-.contact-cards{
-
-  display:grid;
-
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-  gap:24px;
-
-  margin-top:20px;
-
+.contact-container {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 40px !important;
+    flex-wrap: wrap !important;
 }
 
- 
+.contact-card {
+  width: 200px;
+  background: #f5f5f5;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
 
 .contact-card{
 
@@ -426,7 +427,7 @@ h2{color:var(--primary);}
 
   text-decoration:none;
 
-  color:#000;
+  color:#fdfbfb;
 
   box-shadow:0 12px 30px rgba(0,0,0,0.12);
 
@@ -449,6 +450,7 @@ h2{color:var(--primary);}
 .contact-card:hover{
 
   transform:translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 
 }
 
@@ -456,7 +458,7 @@ h2{color:var(--primary);}
 
 .contact-card span.icon{
 
-  font-size:34px;
+  font-size:24px;
 
   margin-bottom:10px;
 
@@ -468,7 +470,7 @@ h2{color:var(--primary);}
 
 .contact-card span.label{
 
-  font-weight:700;
+  font-weight:500;
 
   margin-bottom:6px;
 
@@ -484,6 +486,47 @@ h2{color:var(--primary);}
 
   word-break:break-word;
 
+}
+.contact-section {
+    padding: 50px 5%;
+    background: #f2eeee;
+}
+
+.contact-title {
+    font-size: 32px;
+    color: #f8f9fe;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: #f7f7f7;
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.contact-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
 }
  
 
@@ -610,38 +653,28 @@ footer{
  
 
 .property-type-card {
-
-  background: #ffffff;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
   border-radius: 18px;
 
   overflow: hidden;
 
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-
 }
 
- 
-
-.property-type-card:hover {
-
-  transform: translateY(-8px);
-
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
-
-}
-
- 
 
 /* Image */
 
-.property-card img {
+.property-type-card img {
 
-  width: 60%;
+  width: 100%;
 
-  height: 160px;
+  height: 180px;
 
   object-fit: cover;
 
@@ -657,35 +690,37 @@ footer{
 
 }
 
- 
 
 .property-card-content h3 {
 
-  font-size: 18px;
+  font-size: 20px;
 
-  font-weight: 700;
+  font-weight: 800;
 
   margin-bottom: 8px;
 
-  color: #1f2937;
+  color: #ffffff;
+  
+  letter-spacing: 1px;
+
+  text-shadow: 0 3px 12px rgba(0,0,0,0.8);
 
 }
-
- 
 
 .property-card-content p {
 
-  font-size: 14px;
+  font-size: 15px;
 
   line-height: 1.6;
 
-  color: #555;
+  color: #ffffff;  
 
-  margin-bottom: 16px;
+  font-weight: 600;
+
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 
 }
 
- 
 
 /* Button */
 
@@ -701,7 +736,7 @@ footer{
 
   background: linear-gradient(135deg, #0f766e, #14b8a6);
 
-  color: #fff;
+  color: #fbf2f2;
 
   text-decoration: none;
 
@@ -818,6 +853,231 @@ footer{
   font-size: 14px;
   font-weight: bold;
 }
+ .accordion-text {
+  max-width: 600px;
+  margin: 20px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.accordion-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.accordion-btn:hover {
+  color: #ff8c00; /* optional hover effect */
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.accordion-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.property-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ==== FEATURED PROPERTY CSS ==== */
+.featured-section {
+  padding: 30px 0 60px; /* reduce top space */
+  display: flex;
+  justify-content: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 500px; /* wider */
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;  
+  max-width: 100%;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.slide:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid #c9a24d;
+}
+
+.card-details {
+  padding: 20px;
+}
+
+.price {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.slider-container {
+  position: relative;
+  width: 500px;
+  margin-top: 20px;
+  overflow: hidden; 
+}
+
+.hot-title {
+  position: absolute;
+  top: 10px;   /* move inside instead of negative */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff3c3c, #ff0000);
+  color: #fcf2f2;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  z-index: 30;
+}
+
+.slide-content {
+  padding: 18px 20px;
+}
+/* ===== FULL WEBSITE BACKGROUND ===== */
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.about-section * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Make all sections transparent */
+section {
+  background: transparent !important;
+}
+
+/* Glass effect cards */
+.property-card,
+.review-box,
+.single-review,
+.contact-card {
+  background: rgba(255,255,255,0.12) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+.property-type-card,
+.property-type-card h3,
+.property-type-card p {
+  color: #f6f0f0 !important;
+}
+/* FORCE PROPERTY TYPE TEXT WHITE */
+
+.property-type-card {
+  background: rgba(0,0,0,0.55) !important;
+}
+
+.property-type-card h3,
+.property-type-card p {
+  color: #ffffff !important;
+}
+.property-card,
+.property-card * {
+  color: #ffffff !important;
+}
+.slide {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+/* Make all section headers white except Property Types & Reviews */
+section h2 {
+    color: #ffffff !important;   /* force white */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* Exclude Property Types, Reviews & Contact headers */
+.property-types h2,
+#reviewsList h2,
+.contact-title {
+    color: #f8f9fe !important;  /* light white for contact */
+    text-shadow: none;
+}
+/* Make Featured Property Card Text White */
+.slide .card-details,
+.slide .card-details h3,
+.slide .card-details p,
+.slide .card-details span {
+    color: #ffffff !important;       /* force white text */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6); /* subtle shadow for readability */
+}
+
 
 </style>
 
@@ -877,79 +1137,95 @@ footer{
 
 </header>
 
- 
+
 
 <!-- EXPERIENCE / ABOUT / WHY US -->
 
 <section>
 
-<div class="card-grid">
+<h2 style="color:#f8eff1;">Know More About Us</h2>
 
- 
+<div class="accordion-text">
+  <div class="accordion-item">
+    <button class="accordion-btn">Experience <span class="accordion-arrow">▼</span></button>
+    <div class="accordion-content">
+      <p>With extensive experience in private estates, luxury coffee plantations, and homestays, we bring unmatched market knowledge, legal insight, and local expertise to every transaction. From high-value property sales to long-term leasing and boutique holiday rentals, we ensure that every opportunity is handled with discretion, clarity, and premium service.</p>
+    </div>
+  </div>
 
-<div class="info-card">
+  <div class="accordion-item">
+    <button class="accordion-btn">About Us <span class="accordion-arrow">▼</span></button>
+    <div class="accordion-content">
+      <p>We specialize in curated, high-value properties across the scenic coffee regions of Chikmagalur, Mudigere, and Sakleshpur. Our portfolio includes private coffee estates, premium residential and commercial properties, and exclusive homestays and holiday retreats. With years of experience and deep local expertise, we ensure every transaction is handled with discretion, personalized attention, and the highest standards of professionalism.</p>
+    </div>
+  </div>
 
-<h2>Experience</h2>
+  <div class="accordion-item">
+    <button class="accordion-btn">Why Us <span class="accordion-arrow">▼</span></button>
+    <div class="accordion-content">
+      <p>
+        ✔ Verified properties only<br>
 
-<p>
+        ✔ Complete legal guidance<br>
 
-With years of on-ground experience in the Malnad region, Western Peak Properties has built
+        ✔ End-to-end support from site visit to registration<br>
 
-strong local connections with landowners, estate managers, and investors. Our deep regional
-
-knowledge ensures transparent dealings, verified documentation, and genuine opportunities.
-
+        ✔ Trusted by buyers, sellers, and investors across Karnataka
 </p>
+    </div>
+  </div>
+
+
+</section>
+<!-- ================= FEATURED PROPERTY SECTION ================= -->
+
+<section class="featured-section">
+
+  <div class="slider-container">
+
+    <div class="hot-title">🔥 HOT DEALS</div>
+
+    <button class="arrow left" onclick="prevSlide()">❮</button>
+
+    <div class="slider-wrapper">
+      <div class="slider">
+
+  <a href="property-1.html" class="slide">
+    <img src="coffe-br1.jpg">
+    <div class="card-details">
+      <h3>2.27 Acre Coffee Plantation Land </h3>
+      <p class="price">₹1,20,00,000 (Negotiable)</p>
+      <span>Residential • 40,000 sqft</span>
+    </div>
+  </a>
+
+  <a href="property-2.html" class="slide">
+    <img src="homestay1.jpg">
+    <div class="card-details">
+      <h3>Homestay for Rent</h3>
+      <p class="price">₹75,000 / Month  
+      <br>₹5,00,000 Security Deposit</p>
+      <span>Premium Area • Road Access</span>
+    </div>
+  </a>
+
+  <a href="property-3.html" class="slide">
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+    <div class="card-details">
+      <h3>Paddy Field Land for Sale</h3>
+      <p class="price">₹60,00,000 (Slightly Negotiable)</p>
+      <span>Main Road • Beautiful View</span>
+    </div>
+  </a>
 
 </div>
 
- 
+<button class="arrow right" onclick="nextSlide()">❯</button>
 
-<div class="info-card">
-
-<h2>About Us</h2>
-
-<p>
-
-Western Peak Properties specializes in premium private listings across Chikmagalur,
-
-Mudigere, Sakleshpur, and surrounding Malnad areas. We focus on coffee estates, agricultural
-
-land, luxury homes, homestays, and commercial properties, ensuring privacy, authenticity,
-
-and value for every client.
-
-</p>
-
-</div>
-
- 
-
-<div class="info-card">
-
-<h2>Why Us</h2>
-
-<p>
-
-✔ Verified properties only<br>
-
-✔ Complete legal guidance<br>
-
-✔ End-to-end support from site visit to registration<br>
-
-✔ Trusted by buyers, sellers, and investors across Karnataka
-
-</p>
-
-</div>
-
- 
-
-</div>
+  </div>
 
 </section>
 
- 
 
 <!-- PROPERTY TYPES -->
 
@@ -958,7 +1234,6 @@ and value for every client.
 <h2>Property Types</h2>
 
  
-
 <div class="property-card">
 
 <div class="property-images">
@@ -972,84 +1247,94 @@ and value for every client.
 <strong>Coffee Estates (Sale / Rent / Lease)</strong>
 
 <p>
-
-Select coffee estates ranging from 5 100 acres, available for sale, rent, or long-term lease. Curated and shared privately with qualified buyers.
-
+Select coffee estates ranging from 5–100 acres, available for sale, rent, or long-term lease.
+Curated and shared privately with qualified buyers.
 </p>
 
 </div>
 
- 
 
 <div class="property-card">
 
-<div class="property-images">
+  <div class="property-images">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR35Qc9c1PhtrhXmPtIF8IsoAmlq4UsOmpJtqGn3oYqww&s=10" alt="Paddy Field Image 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXqp40iVxEf1ptSI-1LOvwjavwW8E6xTIYbYy3gGPbmw&s=10" alt="Paddy Field Image 2">
+  </div>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR35Qc9c1PhtrhXmPtIF8IsoAmlq4UsOmpJtqGn3oYqww&s=10">
+  <div class="property-content">
+    <h3>Land / Paddy Field / Sites</h3>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXqp40iVxEf1ptSI-1LOvwjavwW8E6xTIYbYy3gGPbmw&s=10">
+    <p>
+      Select agricultural land parcels available for sale or lease through a private and verified listing process.
+    </p>
+
+    <ul>
+      <li>🌾 Fertile paddy fields from 5 to 100 acres</li>
+      <li>💧 Borewell / River / Water source options</li>
+      <li>📍 Prime and developing locations</li>
+      <li>📄 Clear titles with proper verification</li>
+      <li>🏗️ Approved sites & residential plots</li>
+    </ul>
+
+  </div>
 
 </div>
 
-<strong>Land/paddy field/site</strong>
 
-<p>
+  <div class="property-card">
 
-Select land parcels available for sale or lease, offered through a private and verified listing process.
+    <div class="property-images">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+    </div>
 
-Fertile paddy fields available for sale or lease, upto 5 to 100acres managed with discretion and proper verification.
+    <div class="property-content">
+      <h3>Luxury Residential Properties</h3>
 
-Approved sites and plots available in select locations, shared privately upon inquiry.
+      <p>
+        Premium villas, gated community homes, and luxury residences in prime and scenic locations.
+      </p>
 
-Limited sites offered with clear.
+      <ul>
+        <li>🏡 Premium villas & independent houses</li>
+        <li>🌄 Hill view & scenic surroundings</li>
+        <li>🏊 Modern amenities options</li>
+        <li>🔐 Gated community security</li>
+        <li>📄 Clear legal titles</li>
+      </ul>
 
-</p>
+    </div>
 
-</div>
+  </div>
 
- 
+
 
 <div class="property-card">
 
-<div class="property-images">
+  <div class="property-images">
+    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Homestay Exterior">
+    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Homestay Interior">
+  </div>
 
-<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+  <div class="property-content">
+    <h3>Homestays & Retreat Properties</h3>
 
-</div>
+    <p>
+      Profitable homestay and retreat properties ideal for investment or hospitality business in serene environments.
+    </p>
 
-<strong>Luxury Residential & Commercial</strong>
+    <ul>
+      <li>🌿 Estate-style homestays</li>
+      <li>💼 Ready-to-run hospitality properties</li>
+      <li>🌄 Mountain & coffee estate views</li>
+      <li>🛏️ Fully furnished options available</li>
+      <li>📈 High rental & tourism potential</li>
+    </ul>
 
-<p>
-
-Residential:  Curated luxury residences and villas, shared privately with qualified clients.
-
-Commercial:  Premium commercial properties offered confidentially to discerning investors and businesses.
-
-</p>
-
-</div>
-
- 
-
-<div class="property-card">
-
-<div class="property-images">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+  </div>
 
 </div>
 
-<strong>Homestays & Holiday Homes</strong>
-
-<p>
-
-Exclusive homestays and resorts in prime locations, offering elegance, privacy, and exceptional investment value.
-
-</p>
-
-</div>
-
- 
 
 <div class="property-card">
 
@@ -1120,53 +1405,33 @@ We facilitate legal due diligence through experienced and independent legal prof
 
 </section>
 
- 
+<!-- Contact section (no background) -->
+
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section id="contact" class="contact-section">
+    <h2 class="contact-title">Contact Us</h2>
 
-<h2>Contact Us</h2>
+    <div class="contact-wrapper">
 
-<div class="contact-cards">
+        <div class="contact-card">
+            <div class="icon">📞</div>
+            <h3>Call Us</h3>
+            <p>+91 87624 31194</p>
+        </div>
 
- 
+        <div class="contact-card">
+            <div class="icon">📱</div>
+            <h3>Alternate Number</h3>
+            <p>+91 93537 07326</p>
+        </div>
 
-<a href="tel:+918762431194" class="contact-card">
-
-  <span class="icon">📞</span>
-
-  <span class="label">Call Us</span>
-
-  <span class="value">+91 87624 31194</span>
-
-</a>
-
- 
-
-<a href="tel:+919353707326" class="contact-card">
-
-  <span class="icon">📱</span>
-
-  <span class="label">Alternate Number</span>
-
-  <span class="value">+91 93537 07326</span>
-
-</a>
-
- 
-
-<a href="mailto:westernpeakproperties@gmail.com" class="contact-card">
-
-  <span class="icon">✉️</span>
-
-  <span class="label">Email</span>
-
-  <span class="value">westernpeakproperties@gmail.com</span>
-
-</a>
-
- 
+        <div class="contact-card">
+            <div class="icon">✉️</div>
+            <h3>Email</h3>
+            <p>westernpeakproperties@gmail.com</p>
+        </div>
 
 </div>
 
@@ -1188,90 +1453,132 @@ We facilitate legal due diligence through experienced and independent legal prof
   - Reviews are visible only on the user's device
 */
 
-let showAll = false;
 
-function submitReview() {
-  const name = document.getElementById("customerName").value;
-  const comment = document.getElementById("comment").value;
-  const rating = document.querySelector('input[name="rating"]:checked');
+document.addEventListener("DOMContentLoaded", function() {
 
-  if (!name || !rating || comment.trim() === "") {
-    alert("Please enter your name, rating and review.");
-    return;
+  /* ================= REVIEWS ================= */
+
+  let showAll = false;
+
+  window.submitReview = function() {
+    const name = document.getElementById("customerName").value;
+    const comment = document.getElementById("comment").value;
+    const rating = document.querySelector('input[name="rating"]:checked');
+
+    if (!name || !rating || comment.trim() === "") {
+      alert("Please enter your name, rating and review.");
+      return;
+    }
+
+    const review = {
+      name: name,
+      stars: Number(rating.value),
+      comment: comment
+    };
+
+    let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    reviews.unshift(review);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+
+    document.getElementById("customerName").value = "";
+    document.getElementById("comment").value = "";
+    rating.checked = false;
+
+    loadReviews();
   }
 
-  const review = {
-    name: name,
-    stars: Number(rating.value),
-    comment: comment
-  };
+  function loadReviews() {
+    const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    const reviewsList = document.getElementById("reviewsList");
+    const readMoreContainer = document.getElementById("readMoreContainer");
 
-  let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-  reviews.unshift(review); // newest first
-  localStorage.setItem("reviews", JSON.stringify(reviews));
+    reviewsList.innerHTML = "";
+    readMoreContainer.innerHTML = "";
 
-  document.getElementById("customerName").value = "";
-  document.getElementById("comment").value = "";
-  rating.checked = false;
+    const visibleReviews = showAll ? reviews : reviews.slice(0, 4);
+
+    visibleReviews.forEach(r => {
+      let stars = "★".repeat(r.stars) + "☆".repeat(5 - r.stars);
+      let avatarLetter = r.name.charAt(0).toUpperCase();
+
+      reviewsList.innerHTML += `
+        <div class="single-review">
+          <strong>
+            <span class="review-avatar">${avatarLetter}</span>
+            ${r.name}
+          </strong>
+          <div class="review-stars">${stars}</div>
+          <p>${r.comment}</p>
+        </div>
+      `;
+    });
+
+    if (reviews.length > 4) {
+      readMoreContainer.innerHTML = `
+        <button onclick="toggleReviews()" class="read-more-btn">
+          ${showAll ? "Read less" : "Read more reviews"}
+        </button>
+      `;
+    }
+
+    showOverallRating(reviews);
+  }
+
+  window.toggleReviews = function() {
+    showAll = !showAll;
+    loadReviews();
+  }
+
+  function showOverallRating(reviews) {
+    if (reviews.length === 0) return;
+
+    const total = reviews.reduce((sum, r) => sum + Number(r.stars), 0);
+    const avg = (total / reviews.length).toFixed(1);
+
+    document.getElementById("ratingSummary").innerHTML =
+      `⭐ <strong>${avg}</strong> / 5 
+      <span style="font-size:14px;color:#666;">
+      (${reviews.length} local reviews)</span>`;
+  }
 
   loadReviews();
-}
 
-function loadReviews() {
-  const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-  const reviewsList = document.getElementById("reviewsList");
-  const readMoreContainer = document.getElementById("readMoreContainer");
 
-  reviewsList.innerHTML = "";
-  readMoreContainer.innerHTML = ""; // clear old button
+  /* ================= ACCORDION ================= */
 
-  const visibleReviews = showAll ? reviews : reviews.slice(0, 4);
+  const accordionButtons = document.querySelectorAll('.accordion-btn');
 
-  visibleReviews.forEach(r => {
-    let stars = "★".repeat(r.stars) + "☆".repeat(5 - r.stars);
-    let avatarLetter = r.name.charAt(0).toUpperCase();
+  accordionButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const content = btn.nextElementSibling;
 
-    reviewsList.innerHTML += `
-      <div class="single-review">
-        <strong>
-          <span class="review-avatar">${avatarLetter}</span>
-          ${r.name}
-        </strong>
-        <div class="review-stars">${stars}</div>
-        <p>${r.comment}</p>
-      </div>
-    `;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
   });
 
-  // Add Read more / Read less button if more than 4 reviews exist
-  if (reviews.length > 4) {
-    readMoreContainer.innerHTML = `
-      <button onclick="toggleReviews()" class="read-more-btn">
-        ${showAll ? "Read less" : "Read more reviews"}
-      </button>
-    `;
-  }
+/* ================= SLIDER LOGIC ================= */
 
-  showOverallRating(reviews);
-}
+let currentSlide = 0;
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slide");
 
-function toggleReviews() {
-  showAll = !showAll; // toggle between showing 4 / all
-  loadReviews();       // reload review list
-}
+window.nextSlide = function () {
+  currentSlide = (currentSlide + 1) % slides.length;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+};
 
-function showOverallRating(reviews) {
-  if (reviews.length === 0) return;
+window.prevSlide = function () {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+};
 
-  const total = reviews.reduce((sum, r) => sum + Number(r.stars), 0);
-  const avg = (total / reviews.length).toFixed(1);
+});
 
-  document.getElementById("ratingSummary").innerHTML =
-    `⭐ <strong>${avg}</strong> / 5 <span style="font-size:14px;color:#666;">
-    (${reviews.length} local reviews)</span>`;
-}
-
-window.onload = loadReviews;
 </script>
 
 </body>
@@ -1290,6 +1597,7 @@ window.onload = loadReviews;
 
 
  
+
 
 
 
